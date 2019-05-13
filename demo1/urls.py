@@ -23,6 +23,7 @@ from demo1 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', views.AboutPageView.as_view(extra_context={'active_menu': 'about'}), name='about'),
+    path('search/', views.SearchPageView.as_view(), name='search'),
     path('', views.HomePageView.as_view(extra_context={'active_menu': 'home'}), name='home'),
 ]
 
