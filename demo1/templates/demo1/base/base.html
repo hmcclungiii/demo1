@@ -19,12 +19,12 @@
         <title>{% block title %}{{ title }}{% endblock %}</title>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
-        <meta name="google-site-verification" content="SWIFD4gM5yR9IxFXxbAPp6hfPhOAX8CNUnMe3wb40NU" />
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         
-        <script src="{% static 'www/js/scripts.js' %}"></script>
+        <script src="{% static 'demo1/js/scripts.js' %}"></script>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -32,7 +32,7 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         
-        <link rel="stylesheet" href="{% static 'www/css/style_2.css' %}">
+        <link rel="stylesheet" href="{% static 'demo1/css/style.css' %}">
 
         {% block head %}{% endblock %}
 </head>
@@ -42,12 +42,12 @@
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
 
                     <span class="navbar-logo">
-                        <a href="{% url 'front_page' %}">
-                            <img src="{% static 'www/images/logo-122x183.png' %}" alt="OpenPsych" title="OpenPsych">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'www/images/logo-122x183.png' %}" alt="" title="">
                         </a>
                     </span>
 
-                    <a class="navbar-brand" href="{% url 'front_page' %}">OpenPsych</a>
+                    <a class="navbar-brand" href="{% url 'home' %}">Demo 1</a>
                     
                     <!-- Toggler/collapsibe Button -->
                     {% hamburger_button target_id="collapsibleNavbar" %}
@@ -56,27 +56,17 @@
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                {% if active_menu == 'journals_page' %}
-                                    <a class="nav-link active" href="{% url 'journals_page' %}">Journals</a>
+                                {% if active_menu == 'home' %}
+                                    <a class="nav-link active" href="{% url 'home' %}">Home</a>
                                 {% else %}
-                                    <a class="nav-link" href="{% url 'journals_page' %}">Journals</a>
+                                    <a class="nav-link" href="{% url 'home' %}">Home</a>
                                 {% endif %}
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://openpsych.net/forum">Forums</a>
-                            </li>
-                            <li class="nav-item">
-                                {% if active_menu == 'for_reviewers_page' %}
-                                    <a class="nav-link active" href="{% url 'for_reviewers_page' %}">For Reviewers</a>
+                                {% if active_menu == 'about' %}
+                                    <a class="nav-link active" href="{% url 'about' %}">About Us</a>
                                 {% else %}
-                                    <a class="nav-link" href="{% url 'for_reviewers_page' %}">For Reviewers</a>
-                                {% endif %}
-                            </li>
-                            <li class="nav-item">
-                                {% if active_menu == 'about_page' %}
-                                    <a class="nav-link active" href="{% url 'about_page' %}">About Us</a>
-                                {% else %}
-                                    <a class="nav-link" href="{% url 'about_page' %}">About Us</a>
+                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
                                 {% endif %}
                             </li>
                         </ul>
@@ -87,7 +77,7 @@
                                     Search
                                 </a>
                                 <div class="dropdown-menu hm3-searchbox" id="search_drop">
-                                    <h3>Search OpenPsych</h2>
+                                    <h3>Search</h2>
                                     <form class="navbar-form navbar-right navbar-expand-xl" onsubmit="event.preventDefault(); do_search(this);" id="header-searchForm">
                                         <div class="form-group">
                                             <input autofocus tabindex="0" type="text" class="form-control" placeholder="titles, keywords, authors, ..." name="Search" aria aria-selected="true" id="search_str" required="true">
@@ -111,14 +101,14 @@
                     <div class="container">
                         <div class="col-12 col-md-12">
                             <div class="media-wrap">
-                                <a href="{% url 'front_page' %}">
-                                    <img class="footer-logo" src="{% static 'www/images/logo-122x183.png' %}" alt="OpenPsych">
+                                <a href="{% url 'home' %}">
+                                    <img class="footer-logo" src="{% static 'www/images/logo-122x183.png' %}" alt="">
                                 </a>
                             </div>
                         </div>
 
                         <div class="col-12 col-md-12">
-                            <p>Email: <a href="mailto:support@openpsych.net">support@openpsych.net</a></p>
+                            <p>Email: <a href="mailto:support@.net">support@.net</a></p>
                         </div>
 
                         <div class="media-container-row" style="height: 2px;">
@@ -130,7 +120,7 @@
                         <div class="media-container-row">
                             <div class="copyright">
                                 <p>
-                                    © Copyright 2019 OpenPsych - All Rights Reserved
+                                    © Copyright 2019  - All Rights Reserved
                                 </p>
                             </div>
                         </div>
