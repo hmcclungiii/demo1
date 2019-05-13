@@ -26,6 +26,3 @@ urlpatterns = [
     path('', views.HomePageView.as_view(extra_context={'active_menu': 'home'}), name='home'),
 ]
 
-
-if settings.DEBUG is True:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
