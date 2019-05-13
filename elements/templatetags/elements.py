@@ -44,7 +44,7 @@ def hamburger_button(**kwargs):
     if 'button_class' in kwargs:
         button_class = kwargs.get("button_class")
 
-    color = "#008181"
+    color = "#0081C4"
     if 'color' in kwargs:
         color = kwargs.get("color")
 

@@ -1,7 +1,7 @@
 {% load staticfiles %}
 {% load static %}
 {% load elements %}
-
+ 
 <!DOCTYPE html>
 <html>
     <head>
@@ -50,7 +50,7 @@
                     <a class="navbar-brand" href="{% url 'home' %}">Demo 1</a>
                     
                     <!-- Toggler/collapsibe Button -->
-                    {% hamburger_button target_id="collapsibleNavbar" %}
+                    {% hamburger_button target_id="collapsibleNavbar" color="#0081C4" %}
                             
                     <!-- Navbar links -->
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -129,7 +129,7 @@
         </article>
 
         <!-- Scroll to top button -->
-        {% return_to_top font_color="#e7e7e7" background_color="#008181" %}
+        {% return_to_top font_color="#e7e7e7" background_color="black" %}
 
         <script type="text/javascript">
             $('#search_drop').on('shown.bs.collapse', function() {
