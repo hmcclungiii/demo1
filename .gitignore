@@ -80,7 +80,7 @@ __pycache
 __pycache__/
 
 # don't want the static folder since it is generated
-static/
+/static/
 
 # hmcclungiii - had to add the following line when
 # adding the gecko driver, we don't need its log
